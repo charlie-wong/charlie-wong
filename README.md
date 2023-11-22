@@ -1,8 +1,7 @@
 <h1 align="center">Hi, I'm Charlie! 👋</h1>
 
 <!--
-**charlie-wong/charlie-wong** is a ✨ _special_ ✨ repository because
-its `README.md` (this file) appears on your GitHub profile.
+GitHub ✨ Special ✨ Repository
 
 - 🔭 I’m currently working on ...
 - 🤔 I’m looking for help with ...
