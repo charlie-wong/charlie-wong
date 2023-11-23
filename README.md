@@ -20,7 +20,8 @@ Keep it simple and stupid, do one thing and do it well.
 ### 性能优化(能用优先)
 - 先求运行, 再求正确, 最后性能
 
-<h1 align="center">🤖 ![Visitor Count](https://profile-counter.glitch.me/charlie-wong/count.svg "Visitor Count") 🤖</h1>
+
+<h1 align="center">🤖 <img align="center" alt="Visitor Count" src="https://profile-counter.glitch.me/charlie-wong/count.svg"/> 🤖</h1>
 <!--
 GitHub ✨ Special ✨ Repository
 
