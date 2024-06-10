@@ -5,6 +5,9 @@ on:
   push: { branches: [ "trunk" ] }
   schedule: [ {cron: '30 20 1 * *' } ] # 每月一号晚八点半
 
+# NOTE 任务运行时自动创建 secrets.GITHUB_TOKEN, 任务结束后超期自动销毁
+# https://docs.github.com/en/actions/security-guides/automatic-token-authentication
+
 jobs:
   update-github-metrics:
     runs-on: ubuntu-latest
@@ -29,6 +32,7 @@ jobs:
           plugin_languages_limit: 8
           plugin_languages_threshold: 0%
           plugin_languages_colors: github
+          plugin_languages_sections: recently-used
           plugin_languages_details: bytes-size, percentage
           plugin_languages_categories: markup, programming
-          plugin_languages_sections: recently-used, most-used
+          plugin_languages_ignored: Scheme, RenderScript
