@@ -5,10 +5,8 @@ on:
   push: { branches: [ "trunk" ] }
   # 周期性 => 分钟[0,59]  小时[0,23]  日期[1,31]  月份[1,12]  星期[0,6]
   # https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html
-  schedule: # 触发时间 => 周日晚上八点半
-    - cron: '30 20 * * 0'
-
-# https://github.com/crazy-max/ghaction-github-pages
+  schedule: # 触发时间 => 每月一号晚八点半
+    - cron: '30 20 1 * *'
 
 jobs:
   GenerateGridSnake:
@@ -17,14 +15,12 @@ jobs:
     permissions:
       contents: write
     steps:
-      # https://github.com/actions/checkout
       - name: Checkout user-profile repository
         uses: actions/checkout@v4
-        with:
+        with: # https://github.com/actions/checkout
           fetch-depth: 0
           persist-credentials: false
 
-      # https://github.com/Platane/snk
       - name: Generate github contributions grid snake
         uses: Platane/snk/svg-only@v3
         with:
@@ -35,14 +31,13 @@ jobs:
 
       - name: Commit generated grid snake SVG files
         run: |
-          git config --local user.name  "GitHub Robot"
+          git config --local user.name  "Robot G/H/A"
           git config --local user.email "wong@xwlc.tech"
           git add .
           git commit -m "docs: update grid snake animation"
 
-      # https://github.com/ad-m/github-push-action
       - name: Push changes back to repository
         uses: ad-m/github-push-action@master
-        with:
+        with: # crazy-max/ghaction-github-pages
           branch: ${{ github.ref }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
