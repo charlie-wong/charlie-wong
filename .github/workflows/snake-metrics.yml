@@ -1,0 +1,64 @@
+name: Update contribs snake & gitHub metrics
+
+on:
+  push:
+    branches: [ "trunk" ]
+  # 周期性 => 分钟[0,59]  小时[0,23]  日期[1,31]  月份[1,12]  星期[0,6]
+  schedule: # 每月一号晚八点半 => 触发
+    - cron: '30 20 1 * *'
+
+# NOTE 任务运行时自动创建 secrets.GITHUB_TOKEN, 任务结束后超期自动销毁
+# https://docs.github.com/en/actions/security-guides/automatic-token-authentication
+
+jobs:
+  update-contribs-snake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      # https://github.com/actions/checkout
+      - name: Checkout your repository
+        uses: actions/checkout@v4
+
+      # https://github.com/Platane/snk
+      - name: Generate contributions grid snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/contribs-grid-snake-lite.svg
+            assets/contribs-grid-snake-dark.svg?palette=github-dark
+
+      # https://github.com/EndBug/add-and-commit
+      - name: Push changes back to repository
+        uses: EndBug/add-and-commit@v10
+        with:
+          committer_name: GitHubAction
+          committer_email: action@github.com
+          message: 'docs: update contributions snake animation'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  update-github-metrics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      # https://github.com/lowlighter/metrics
+      - uses: lowlighter/metrics@latest
+        with:
+          user: charlie-wong
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: assets/activity-metrics.svg
+          template: classic
+          config_output: svg
+          config_display: regular
+          config_timezone: Asia/Shanghai
+          base: header, activity, community, repositories, metadata
+          committer_message: "docs: update activity statistics metrics"
+          output_condition: data-changed
+          repositories_forks: yes
+          plugin_lines: yes
+          plugin_languages: yes
+          plugin_languages_details: bytes-size, percentage

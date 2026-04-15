@@ -1,21 +1,30 @@
+<!-- 动态打字效果 -->
+<h1 align="center">
+  <img alt="typing-animation" src="/assets/typing-animation.svg">
+</h1>
+
+<!-- 个人资料徽标 -->
 <div align="center">
-  <h1>Charles Wong</h1>
+  <a href="https://xwlc.github.io/"><img src="https://img.shields.io/badge/website-博客-blue"></a>&nbsp;
+  <!-- 访问计数 https://visitorbadge.io/ -->
+  ![Visitors](https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2Fcharlie-wong&countColor=%23ff8a65&style=plastic)
+</div>
+
+<div align="center">
   <picture>
-    <img alt="contribs commits animation" src="/assets/snake-lite.svg">
+    <!-- 依据提交状态生成贪吃蛇动态图片 https://github.com/Platane/snk -->
+    <source media="(prefers-color-scheme: dark)"  srcset="/assets/contribs-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/contribs-grid-snake-lite.svg" />
+    <img alt="contribs-grid-snake" src="/assets/contribs-grid-snake-lite.svg" />
   </picture>
   <h2 align="center">✨ Keep it simple and stupid, do one thing and do it well. ✨</h2>
   <picture>
-    <img alt="charles-wong github metrics" src="/assets/metrics.svg">
+    <!-- 状态信息统计 https://github.com/lowlighter/metrics -->
+    <img alt="activity-metrics" src="/assets/activity-metrics.svg">
   </picture>
-<!--
-https://raw.githubusercontent.com/charlie-wong/charlie-wong/trunk/assets/snake-dark.svg
--->
-  <h3 align="center">🌱 The coding is easy but do it well hard. 🌱</h3>
-  <h1><img align="center" alt="Visitor Count" src="https://profile-counter.glitch.me/charlie-wong/count.svg"/></h1>
 </div>
 
-
-
-
-
-
+<!-- https://github.com/Ashutosh00710/github-readme-activity-graph -->
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=charlie-wong&theme=nord">
+</div>
