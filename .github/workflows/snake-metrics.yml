@@ -34,8 +34,8 @@ jobs:
       - name: Push changes back to repository
         uses: EndBug/add-and-commit@v10
         with:
-          committer_name: GitHubAction
-          committer_email: action@github.com
+          author_name: charlie-wong
+          author_email: charlie-wong@outlook.com
           message: 'docs: update contributions snake animation'
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -45,6 +45,9 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Checkout your repository
+        uses: actions/checkout@v4
+
       # https://github.com/lowlighter/metrics
       - uses: lowlighter/metrics@latest
         with:

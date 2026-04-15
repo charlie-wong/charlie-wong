@@ -6,9 +6,9 @@
 <!-- 个人资料徽标 -->
 <div align="center">
   <a href="https://xwlc.github.io/"><img src="https://img.shields.io/badge/website-博客-blue"></a>&nbsp;
-  <!-- 访问计数 https://visitorbadge.io/ -->
-  ![Visitors](https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2Fcharlie-wong&countColor=%23ff8a65&style=plastic)
-</div>
+  <!-- 访问计数 https://github.com/antonkomarev/github-profile-views-counter -->
+  <img src="https://komarev.com/ghpvc/?username=charlie-wong&base=5628&color=orange&style=plastic&label=visitors">
+</div><!-- &abbreviated=true -->
 
 <div align="center">
   <picture>
@@ -26,5 +26,5 @@
 
 <!-- https://github.com/Ashutosh00710/github-readme-activity-graph -->
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=charlie-wong&theme=nord">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=charlie-wong&theme=github">
 </div>
