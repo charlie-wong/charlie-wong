@@ -1,4 +1,4 @@
-name: Update contribs snake & gitHub metrics
+name: Update commits snake & metrics
 
 on:
   push:
@@ -50,15 +50,21 @@ jobs:
         with:
           user: charlie-wong
           token: ${{ secrets.GITHUB_TOKEN }}
+          committer_message: "docs: update activity statistics metrics"
           filename: assets/activity-metrics.svg
           template: classic
           config_output: svg
-          config_display: regular
+          config_display: large
           config_timezone: Asia/Shanghai
           base: header, activity, community, repositories, metadata
-          committer_message: "docs: update activity statistics metrics"
           output_condition: data-changed
           repositories_forks: yes
-          plugin_lines: yes
+
+          # 语言统计
           plugin_languages: yes
+          plugin_languages_limit: 8 # 最多显示 8 种语言
+          plugin_languages_sections: most-used
+          plugin_languages_threshold: 0% # 占比少于 x% 则隐藏
           plugin_languages_details: bytes-size, percentage
+          plugin_languages_categories: markup, programming
+          plugin_languages_aliases: "JavaScript:JS, TypeScript:TS, ..."
