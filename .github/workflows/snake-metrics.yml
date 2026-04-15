@@ -49,7 +49,7 @@ jobs:
       - uses: lowlighter/metrics@latest
         with:
           user: charlie-wong
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/activity-metrics.svg
           template: classic
           config_output: svg
