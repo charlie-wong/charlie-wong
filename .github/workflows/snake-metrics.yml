@@ -59,7 +59,7 @@ jobs:
           config_output: svg
           config_display: large
           config_timezone: Asia/Shanghai
-          base: header, activity, community, repositories, metadata
+          base: header, activity, community, repositories
           output_condition: data-changed
           repositories_forks: yes
 
