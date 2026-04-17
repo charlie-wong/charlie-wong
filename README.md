@@ -7,7 +7,7 @@
 <div align="center">
   <a href="https://xwlc.github.io/"><img src="https://img.shields.io/badge/blog-博客-blue"></a>&nbsp;
   <!-- START BADGE --><!-- update timestamp: 2026-04-17 -->
-  <img src="https://img.shields.io/badge/visitors-141%2f0-orange?style=plastic">
+  <img src="https://img.shields.io/badge/visitors-166%2f1-orange?style=plastic">
   <!-- ENDED BADGE -->
 </div>
 
