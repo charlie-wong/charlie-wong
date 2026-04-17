@@ -62,6 +62,8 @@ jobs:
           base: header, activity, community, repositories
           output_condition: data-changed
           repositories_forks: yes
+          plugin_traffic: yes # 仓库流量(查看量)
+          plugin_lines: yes   # 代码变更(添加/删除)
 
           # 语言统计
           plugin_languages: yes

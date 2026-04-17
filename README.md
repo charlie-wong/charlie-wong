@@ -21,7 +21,6 @@
     <!-- 状态信息统计 https://github.com/lowlighter/metrics -->
     <img alt="activity-metrics" src="/assets/activity-metrics.svg">
   </picture>
-  <h2 align="center">✨ Keep it simple and stupid, do one thing and do it well. ✨</h2>
   <!-- https://github.com/Ashutosh00710/github-readme-activity-graph -->
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=charlie-wong&theme=github">
 </div>
