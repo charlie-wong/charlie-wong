@@ -15,7 +15,7 @@ function readJSON(file) {
       console.error(file + ' is not valid JSON file.');
     }
   }
-  return { "visitor": 0, "uniques": 0, "history": [] };
+  return { "visitor": 1, "uniques": 1, "history": [] };
 }
 
 function writeJSON(data) {
@@ -75,11 +75,11 @@ function updateReadmeBadge(visitor, uniques) {
   try {
     const metrics = readJSON(METRICS_JSON);
     const traffic = readJSON(TRAFFIC_JSON);
-    metrics.visitor += traffic.count;
+    metrics.history = mergeHistory(metrics, traffic);
     if (traffic.uniques > 1) {
       metrics.uniques += traffic.uniques;
     }
-    metrics.history = mergeHistory(metrics, traffic);
+    metrics.visitor += metrics.history.reduce((sum, it) => sum + it.counter, 0);
     writeJSON(metrics);
     updateReadmeBadge(metrics.visitor, metrics.uniques);
   } catch (err) {
