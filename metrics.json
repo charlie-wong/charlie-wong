@@ -1,0 +1,36 @@
+{
+  "visitor": 141,
+  "uniques": 0,
+  "history": [
+    {
+      "date": "2026-04-11",
+      "counter": 7,
+      "uniques": 1
+    },
+    {
+      "date": "2026-04-12",
+      "counter": 1,
+      "uniques": 1
+    },
+    {
+      "date": "2026-04-13",
+      "counter": 2,
+      "uniques": 1
+    },
+    {
+      "date": "2026-04-14",
+      "counter": 1,
+      "uniques": 1
+    },
+    {
+      "date": "2026-04-15",
+      "counter": 117,
+      "uniques": 1
+    },
+    {
+      "date": "2026-04-16",
+      "counter": 13,
+      "uniques": 1
+    }
+  ]
+}
