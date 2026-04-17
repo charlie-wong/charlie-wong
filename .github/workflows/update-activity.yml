@@ -1,25 +1,40 @@
-name: Update commits snake & metrics
+name: Update snake & activity & traffic
 
 on:
   push:
     branches: [ "trunk" ]
   # 周期性 => 分钟[0,59]  小时[0,23]  日期[1,31]  月份[1,12]  星期[0,6]
-  schedule: # 每月一号晚八点半 => 触发
-    - cron: '30 20 1 * *'
+  schedule: # 每周日零时零分 => 触发
+    - cron: '0 0 * * 0'
+      timezone: "Asia/Shanghai"
+  workflow_dispatch: # 允许手动触发工作流
 
-# NOTE 任务运行时自动创建 secrets.GITHUB_TOKEN, 任务结束后超期自动销毁
-# https://docs.github.com/en/actions/security-guides/automatic-token-authentication
+# NOTE 工作流运行时自动创建 secrets.GITHUB_TOKEN, 任务结束后其自动超期销毁
+# https://docs.github.com/en/actions/tutorials/authenticate-with-github_token
+# https://docs.github.com/en/rest/authentication/permissions-required-for-github-apps
 
 jobs:
-  update-contribs-snake:
+  update-snake-activity-traffic:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:
       contents: write
     steps:
-      # https://github.com/actions/checkout
-      - name: Checkout your repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v6       # https://github.com/actions/checkout
+      - uses: actions/setup-node@v6     # https://github.com/actions/setup-node
+        with:
+          node-version: 24
+
+      # 账户 Settings > Developer Settings > Personal Access Tokens > Fine-grained tokens
+      # 仓库 Settings > Secrets and Variables > Actions > secrets > Repository secrets
+      - env:
+          REPOISTORY: ${{ github.repository }}
+          GH_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
+        run: |
+          gh api "/repos/${REPOISTORY}/traffic/views" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2026-03-10" > traffic.json
+          node traffic.js
 
       # https://github.com/Platane/snk
       - name: Generate contributions grid snake
@@ -34,24 +49,15 @@ jobs:
       - name: Push changes back to repository
         uses: EndBug/add-and-commit@v10
         with:
-          author_name: charlie-wong
+          author_name: ${{ github.repository_owner }}
           author_email: charlie-wong@outlook.com
-          message: 'docs: update contributions snake animation'
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
-  update-github-metrics:
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout your repository
-        uses: actions/checkout@v4
+          message: 'docs: update snake animation & github traffic'
 
       # https://github.com/lowlighter/metrics
       - uses: lowlighter/metrics@latest
         with:
-          user: charlie-wong
+          user: ${{ github.repository_owner }}
           token: ${{ secrets.GITHUB_TOKEN }}
           committer_message: "docs: update activity statistics metrics"
           filename: assets/activity-metrics.svg

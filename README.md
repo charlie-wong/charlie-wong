@@ -6,8 +6,9 @@
 <!-- 徽标 badges -->
 <div align="center">
   <a href="https://xwlc.github.io/"><img src="https://img.shields.io/badge/blog-博客-blue"></a>&nbsp;
-  <!-- 访问计数 https://github.com/antonkomarev/github-profile-views-counter  &abbreviated=true -->
-  <img src="https://komarev.com/ghpvc/?username=charlie-wong&base=5628&color=orange&style=plastic&label=visitors">
+  <!-- START BADGE -->
+  <img src="https://img.shields.io/badge/visitors-128%2f0-orange?style=plastic">
+  <!-- ENDED BADGE -->
 </div>
 
 <div align="center">
