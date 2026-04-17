@@ -79,7 +79,7 @@ function updateReadmeBadge(visitor, uniques) {
     if (traffic.uniques > 1) {
       metrics.uniques += traffic.uniques;
     }
-    metrics.visitor += metrics.history.reduce((sum, it) => sum + it.counter, 0);
+    metrics.visitor = metrics.history.reduce((sum, it) => sum + it.counter, 0);
     writeJSON(metrics);
     updateReadmeBadge(metrics.visitor, metrics.uniques);
   } catch (err) {
