@@ -1,13 +1,13 @@
 name: "Update snake & activity & traffic."
 
 on:
+  workflow_dispatch: # 允许手动触发工作流
+  schedule:
+    - timezone: "Asia/Shanghai"
+      # 分钟[0,59]  小时[0,23]  日期[1,31]  月份[1,12]  星期[0,6]
+      cron: '0  0  *  *  0' # 每周日零时零分
   push:
     branches: [ "trunk" ]
-  # 周期性 => 分钟[0,59]  小时[0,23]  日期[1,31]  月份[1,12]  星期[0,6]
-  schedule: # 每周日零时零分 => 触发
-    - cron: '0 0 * * 0'
-      timezone: "Asia/Shanghai"
-  workflow_dispatch: # 允许手动触发工作流
 
 # NOTE 工作流运行时自动创建 secrets.GITHUB_TOKEN, 任务结束后其自动超期销毁
 # https://docs.github.com/en/actions/tutorials/authenticate-with-github_token
@@ -25,8 +25,10 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v6   # https://github.com/actions/checkout
-      - uses: actions/setup-node@v6 # https://github.com/actions/setup-node
+      # https://github.com/actions/checkout
+      - uses: actions/checkout@v6
+      # https://github.com/actions/setup-node
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
 
