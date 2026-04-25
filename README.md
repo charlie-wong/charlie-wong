@@ -6,8 +6,8 @@
 <!-- 徽标 badges -->
 <div align="center">
   <a href="https://xwlc.github.io/"><img src="https://img.shields.io/badge/blog-博客-blue"></a>&nbsp;
-  <!-- START BADGE --><!-- update timestamp: 2026-04-20 -->
-  <img src="https://img.shields.io/badge/visitors-213%2f1-orange?style=plastic">
+  <!-- START BADGE --><!-- update timestamp: 2026-04-25 -->
+  <img src="https://img.shields.io/badge/visitors-224%2f1-orange?style=plastic">
   <!-- ENDED BADGE -->
 </div>
 
