@@ -6,8 +6,9 @@
 <!-- 徽标 badges -->
 <div align="center">
   <a href="https://xwlc.github.io/">
-    <img src="https://img.shields.io/badge/blog-我本非我-blue">
-  </a>&nbsp;
+    <!-- https://img.shields.io/badge/blog-我本非我-blue?style=plastic -->
+    <img alt="我本非我" src="/assets/blog.svg">
+  </a>
   <!-- START BADGE --><!-- update timestamp: 2026-05-02 -->
   <img src="https://img.shields.io/badge/visitors-230%2f3-orange?style=plastic">
   <!-- ENDED BADGE -->
