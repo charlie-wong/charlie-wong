@@ -52,7 +52,7 @@ function updateReadmeBadge(visitor, uniques) {
   const updateDate = new Date().toISOString().split('T')[0];
   const badgeRegex = /<!-- START BADGE -->[\s\S]*?<!-- ENDED BADGE -->/g;
   const badgeBlock = `<!-- START BADGE --><!-- update timestamp: ${updateDate} -->
-  <a><img src="https://img.shields.io/badge/visitors-${visitor}%2f${uniques}-orange?style=plastic"></a>
+  <img src="https://img.shields.io/badge/visitors-${visitor}%2f${uniques}-orange?style=plastic">
   <!-- ENDED BADGE -->`;
 
   if (fs.existsSync('README.md')) {
