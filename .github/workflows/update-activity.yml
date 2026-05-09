@@ -6,8 +6,8 @@ on:
     - timezone: "Asia/Shanghai"
       # 分钟[0,59]  小时[0,23]  日期[1,31]  月份[1,12]  星期[0,6]
       cron: '0  0  *  *  0' # 每周日零时零分
-  push:
-    branches: [ "trunk" ]
+# push:
+#   branches: [ "trunk" ]
 
 # NOTE 工作流运行时自动创建 secrets.GITHUB_TOKEN, 任务结束后其自动超期销毁
 # https://docs.github.com/en/actions/tutorials/authenticate-with-github_token
