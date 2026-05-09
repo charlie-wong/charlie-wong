@@ -8,8 +8,8 @@
   <a href="https://xwlc.github.io/">
     <img alt="我本非我" src="/assets/blog.svg">
   </a>
-  <!-- START BADGE --><!-- update timestamp: 2026-05-08 -->
-  <img src="https://img.shields.io/badge/visitors-230%2f5-orange?style=plastic">
+  <!-- START BADGE --><!-- update timestamp: 2026-05-09 -->
+  <img src="https://img.shields.io/badge/visitors-247%2f7-orange?style=plastic">
   <!-- ENDED BADGE -->
 </div>
 
