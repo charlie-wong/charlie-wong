@@ -3,14 +3,16 @@
   <img alt="typing-animation" src="/assets/gnomology-animation.svg">
 </h1>
 
+<!-- BADGE START --><!-- update timestamp: 2026-05-09 -->
+[visitors-counter]: https://img.shields.io/badge/visitors-247%2f7-orange?style=plastic
+<!-- BADGE ENDED -->
+
 <!-- 徽标 badges -->
 <div align="center">
-  <a href="https://xwlc.github.io/">
-    <img alt="我本非我" src="/assets/blog.svg">
-  </a>
-  <!-- START BADGE --><!-- update timestamp: 2026-05-09 -->
-  <img src="https://img.shields.io/badge/visitors-247%2f7-orange?style=plastic">
-  <!-- ENDED BADGE -->
+
+[![我本非我](/assets/blog.svg)](https://xwlc.github.io/)
+[![访问统计][visitors-counter]](https://xwlc.github.io/)
+
 </div>
 
 <div align="center">

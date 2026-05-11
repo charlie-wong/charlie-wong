@@ -50,10 +50,11 @@ function updateReadmeBadge(visitor, uniques) {
   visitor = abbreviated(visitor);
   uniques = abbreviated(uniques);
   const updateDate = new Date().toISOString().split('T')[0];
-  const badgeRegex = /<!-- START BADGE -->[\s\S]*?<!-- ENDED BADGE -->/g;
-  const badgeBlock = `<!-- START BADGE --><!-- update timestamp: ${updateDate} -->
-  <img src="https://img.shields.io/badge/visitors-${visitor}%2f${uniques}-orange?style=plastic">
-  <!-- ENDED BADGE -->`;
+  const badgeRegex = /<!-- BADGE START -->[\s\S]*?<!-- BADGE ENDED -->/g;
+  const badgeBlock = `
+<!-- BADGE START --><!-- update timestamp: ${updateDate} -->
+[visitors-counter]: https://img.shields.io/badge/visitors-${visitor}%2f${uniques}-orange?style=plastic
+<!-- BADGE ENDED -->`;
 
   if (fs.existsSync('README.md')) {
     const readme = fs.readFileSync('README.md', 'utf-8');
