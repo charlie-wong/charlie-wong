@@ -12,12 +12,6 @@ on:
 # NOTE 工作流运行时自动创建 secrets.GITHUB_TOKEN, 任务结束后其自动超期销毁
 # https://docs.github.com/en/actions/tutorials/authenticate-with-github_token
 
-# https://docs.github.com/en/rest/authentication/permissions-required-for-github-apps
-# NOTE /repos/OWNER/REPO/traffic/views 需要 Repository permissions for "Administration"
-# - 账户 Settings > Developer Settings > Personal Access Tokens > Fine-grained Tokens
-# - 仓库 Settings > Secrets and Variables > Actions > secrets > Repository secrets > TRAFFIC_TOKEN
-# 仓库级环境变量 TRAFFIC_TOKEN 的值即上述生成的 Fine-grained Tokens 密钥(需赋予 Administration 权限)
-
 jobs:
   update-snake-activity-traffic:
     runs-on: ubuntu-latest
