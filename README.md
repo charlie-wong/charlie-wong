@@ -4,8 +4,9 @@
 </h1>
 
 
-<!-- BADGE START --><!-- update timestamp: 2026-05-16 -->
-[visitors-counter]: https://img.shields.io/badge/visitors-249%2f7-orange?style=plastic
+
+<!-- BADGE START --><!-- update timestamp: 2026-05-23 -->
+[visitors-counter]: https://img.shields.io/badge/visitors-250%2f7-orange?style=plastic
 <!-- BADGE ENDED -->
 
 <!-- 徽标 badges -->
