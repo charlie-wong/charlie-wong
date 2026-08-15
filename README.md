@@ -16,8 +16,9 @@
 
 
 
-<!-- BADGE START --><!-- update timestamp: 2026-08-08 -->
-[visitors-counter]: https://img.shields.io/badge/visitors-252%2f7-orange?style=plastic
+
+<!-- BADGE START --><!-- update timestamp: 2026-08-15 -->
+[visitors-counter]: https://img.shields.io/badge/visitors-254%2f9-orange?style=plastic
 <!-- BADGE ENDED -->
 
 <!-- 徽标 badges -->

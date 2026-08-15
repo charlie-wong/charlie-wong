@@ -1,6 +1,6 @@
 {
-  "visitor": 252,
-  "uniques": 7,
+  "visitor": 254,
+  "uniques": 9,
   "history": [
     {
       "date": "2026-04-11",
@@ -91,6 +91,11 @@
       "date": "2026-07-13",
       "counter": 1,
       "uniques": 1
+    },
+    {
+      "date": "2026-08-14",
+      "counter": 2,
+      "uniques": 2
     }
   ]
 }
